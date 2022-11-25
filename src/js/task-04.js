@@ -1,18 +1,21 @@
 const refs = {
-    decrementBtn = document.querySelector('button[data-action ="decrement"]');
-    incrementBtn = document.querySelector('button[data-action ="increment"]');
-    valueEl = document.querySelector('#value');
+    valueEl: document.querySelector('#value'),
+    decrementBtn: document.querySelector('button[data-action ="decrement"]'),
+    incrementBtn: document.querySelector('button[data-action ="increment"]'),
 }
 
 
 const clickFunction = {
     value: 0,
-    incMethod() = {
+    incMethod() {
         this.value += 1;
-        return value.textContent = this.value;
-    }
-    decmethod() = {
+        return refs.valueEl.textContent = this.value;
+    },
+    decMethod() {
         this.value -= 1;
-        return value.textContent = this.value;
-    }
+        return refs.valueEl.textContent = this.value;
+    },
 }
+
+refs.incrementBtn.addEventListener('click', clickFunction.incMethod.bind(clickFunction))
+refs.decrementBtn.addEventListener('click', clickFunction.decMethod.bind(clickFunction))
