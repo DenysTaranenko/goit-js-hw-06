@@ -1,10 +1,9 @@
 const refs = {
-    inputEl: document.querySelector('#font-size-control'),
-    textEl: document.querySelector('#text')
-}
+  inputEl: document.querySelector("#font-size-control"),
+  textEl: document.querySelector("#text"),
+};
 
-refs.inputEl.addEventListener('input', changeFontSize);
+refs.inputEl.addEventListener("input", changeFontSize);
 function changeFontSize(ev) {
-    refs.textEl.style.fontSize = refs.inputEl.value * (16 / 56) + 'px';
+  refs.textEl.style.fontSize = refs.inputEl.value * (16 / 56) + "px";
 }
-
